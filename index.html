@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/Dev/DossierCSS/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+
+    <title></title>
+  </head>
+  <body>
+    <div>
+       <video autoplay loop poster="" class="video">
+           <!-- <source src="video/Crocodile.webm" type="video/webm"> -->
+           <!-- <source src="video/Crocodile.mp4" type="video/mp4"> -->
+             <source src="assets/video/emi.ogv" type="video/mp4">
+       </video>
+       <!--********fin div video********-->
+   </div
+<div class="col-xs-12 col-lg-12 bouton">
+  <button type="button" name="button">login</button>
+  <button type="button" name="button">Subscribe</button>
+</div>
+  <div class=" col-xs-12 col-lg-12 titre">
+<h1>Music Online</h1>
+<form method="post" action="">
+  <div class="row">
+
+  </div>
+
+
+</form>
+  </div>
+  <div class="col-lg-offset-4 col-lg-6" id="formulaire">
+    <label for="pseudo"></label>
+    <input class="form" type="text" placeholder="Pseudo (minimum 4 caractère)" id="pseudo"><span id="verifPseudo"></span><br>
+    <!-- <label for="age">age :</label><br
+    <input type="text" id="age"><span id="verifAge"></span><br> -->
+    <label for="email"></label>
+    <input class="form" type="text" placeholder="Email" id="email"><span id="verifEmail"></span><br>
+
+    <label for="mdp"></label>
+    <input class="form" type="password" placeholder="Mot de passe (minimum 8 caractère)" id="mdp"><span id="verifmdp"></span><br>
+
+       <input class="valider" type="submit" value="Valider">
+  </div>
+  <!-- <h3>Inscription</h3> -->
+  <div id="message"></div>
+
+    <script>
+    $(function(){
+      // Déclaration des 3 fonctions de contrôle :
+      function verifPseudo(){
+        // par convention la variable $champ prend un $ car on lui affecte un élément sélectionné.
+        var $champ = $("#pseudo");
+        // val() pour récupérer la valeur d'un input :
+        if ($champ.val().length < 4 || $champ.val().length > 25){
+          $("#verifPseudo").html("<img src='cross.png'>");
+          return false;
+        } else {
+          $("#verifPseudo").html("<img src='checked.png'>");
+          return true;
+        }
+      }
+      function verifAge(){
+        var $champ = $("#age");
+        if(isNaN($champ.val()) || $champ.val() < 18){
+          $("#verifAge").html("<img src='cross.png'>");
+          return false;
+        } else {
+          $("#verifAge").html("<img src='checked.png'>");
+          return true;
+        }
+      }
+      function verifmdp(){
+        // par convention la variable $champ prend un $ car on lui affecte un élément sélectionné.
+        var $champ = $("#mdp");
+        // val() pour récupérer la valeur d'un input :
+        if ($champ.val().length < 8 || $champ.val().length > 12){
+          $("#verifmdp").html("<img src='cross.png'>");
+          return false;
+        } else {
+          $("#verifmdp").html("<img src='checked.png'>");
+          return true;
+        }
+      }
+      function verifEmail(){
+        var $champ = $("#email");
+        if (/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/.test($champ.val())){
+          // si l'email correspond à l'exp régulère :
+          $("#verifEmail").html("<img src='checked.png'>");
+          return true;
+        } else {
+          $("#verifEmail").html("<img src='cross.png'>");
+          return false;
+        }
+      }
+      // On appelle toutes les fonctions :
+      $("#pseudo").on('input', verifPseudo);
+      $("#age").on('input', verifAge);
+      $("#email").on('input', verifEmail);
+      $("#mdp").on('input', verifmdp);
+      // L'événement input se déclenche au changement de contenu du champ.
+      // On vérifie tous les champs quand on clique sur "valider" :
+      $("form").submit(function(){
+        var verifFinalPseudo = verifPseudo();
+        var verifFinalAge = verifAge();
+        var verifFinalEmail = verifEmail();
+        var verifFinalmdp = verifmdp();
+        if (verifFinalEmail && verifFinalAge && verifFinalPseudo && verifFinalmdp) {
+          return true;
+          // pour ne pas bloquer l'envoi du formulaire
+        } else {
+          return false;
+          //  pour bloquer l'envoi du formulaire
+        }
+      });
+    });
+  // <script>
+// $(function(){
+//   $(".button").mouseover(){
+//
+//   }
+// });
+$(document).ready(function(){
+    $("#formulaire").delay(2500).fadeIn(function(){
+      // $(this).delay(2000).fadeIn();
+        // $(".form").show();
+        // $("#email").fadeIn(0);
+        // $("#mdp").fadeIn(0);
+    });
+});
+
+
+$('.titre').click(function(){
+  location.href = 'main.html';
+});
+
+$("video").prop('muted', true);
+
+
+
+
+  </script>
+
+  </body>
+</html>

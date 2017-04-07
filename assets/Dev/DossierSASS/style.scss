@@ -1,0 +1,84 @@
+.onMetLeFond{
+  background-image: url('../../Images/mix.jpg');
+  background-size: cover;
+  // background-color: black;
+}
+.laChanson{
+  // border: 1px solid white ;
+  height: 100vh;
+}
+.espaceTop{
+  height: 10vh;
+  // border: 1px solid white ;
+}
+.laPlayliste{
+  // height: 80vh ;
+  // border: 1px solid white ;
+}
+.Chanson{
+  height: 15vh ;
+  // border: 1px solid white ;
+}
+.tuMetImage {
+  height: 78vh ;
+  border: 1px solid white ;
+}
+.tuMetPlayliste{
+  height: 10vh ;
+  border: 1px solid white ;
+}
+.espaceImagePlayliste{
+  height: 10vh ;
+  // border: 1px solid white ;
+}
+.Like{
+  height: 15vh ;
+  // border: 1px solid white ;
+}
+
+.espaceEntreChanson{
+  height: 3vh;
+  // border: 1px solid white
+}
+.espacePlayTop{
+  height: 7vh ;
+  // border: 1px solid white ;
+}
+img{
+  height: 100% ;
+  width:100%;
+  box-shadow: 10px 10px 5px rgb(17, 35, 50);
+  border: 1px solid rgb(241, 13, 13);
+  // size : 20%
+// filter: brightness(75);
+}
+img:hover{
+  // height: 110% ;
+  // width: 110% ;
+  -ms-transform: scale(1.1, 1.1); /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1); /* Safari */
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.5s ;
+}
+h3{
+  color: white ;
+  font-family: 'Shojumaru', cursive;
+}
+
+.containIcon{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.containPrev{
+  justify-content: flex-end;
+}
+
+.icone{
+  height: 30px;
+  width: 30px;
+}
+
+@import 'lecteur.scss';
+@import 'alain.scss';

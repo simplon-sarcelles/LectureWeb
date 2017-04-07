@@ -1,0 +1,129 @@
+/*.videodiv{
+	position: relative;
+	height: 0;
+}*/
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+video{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.titre{
+  /*border: ridge green;*/
+  text-align: center;
+  /*line-height:*/
+  height: 70vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-size: 90px;
+font-family: "pacifico";
+}
+/*.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}*/
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+
+  }
+
+  to {
+    opacity: 1;
+
+  }
+
+}
+h1{
+  color: white;
+-webkit-animation-name: fadeIn;
+animation: fadeIn 4s;
+  /*animation-iteration-count: infinite;*/
+}
+.button{
+
+  display: flex;
+}
+button{
+  margin-left: 17px;
+    float: right;
+}
+/*parti niko formulaire*/
+span{
+  /*font-family: "Pacifico";*/
+  font-size: 15px;
+}
+label{
+  font-size: 22px;
+  /*opacity: 0.3;*/
+  color: black;
+}
+#formulaire{
+  /*border: solid blue;*/
+padding-left: 80px;
+display: none;
+}
+.form{
+/*color: black;*/
+width: 40%;
+height: 30px;
+/*border: 2px solid red;*/
+    border-radius: 4px;
+opacity: 0.5;
+font-size: 13px;
+font-style: italic;
+text-align: center;
+}
+
+.valider{
+
+/*border: 2px;*/
+margin-top: 5px;
+margin-left: 80px;
+/*font-size: 17px;*/
+opacity: 0.5
+
+}
+
+@media only screen and (max-width: 500px){
+
+  .form{
+
+  margin-top: 5px;
+
+  color: black;
+
+  width: 80%;
+
+  height: 25px;
+
+  border: 2px solid red;
+
+  border-radius: 4px;
+
+  opacity: 0.5;
+
+  font-size: 13px;
+
+  font-style: italic;
+
+  }
+
+}

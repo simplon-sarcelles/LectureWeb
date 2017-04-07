@@ -1,0 +1,96 @@
+/*Partie Lecteur*/
+
+.lecteur{
+  height: 85%;
+  display: flex;
+  align-items: flex-end;
+}
+.music0{
+  background-image: url('../../Audio/chanson1.jpg');
+  background-size: cover;
+  background-position: top;
+}
+.music1{
+  background-image: url('../../Audio/chanson2.jpg');
+  background-size: cover;
+  background-position: top;
+}
+.music2{
+  background-image: url('../../Audio/chanson3.jpeg');
+  background-size: cover;
+  background-position: top;
+}
+.music3{
+  background-image: url('../../Audio/chanson4.jpg');
+  background-size: cover;
+  background-position: top;
+}
+.music4{
+  background-image: url('../../Audio/chanson5.jpg');
+  background-size: cover;
+  background-position: top;
+}
+
+.menuMusic{
+  height: 25%;
+  display: none;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.player{
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
+
+#audioPlayer{
+  position: absolute;
+  top:80%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+
+
+
+
+/*Partie Titre*/
+
+.titleLecteur{
+  height: 15%;
+  background-color: black;
+  color: white;
+}
+
+.titleLecteur h3{
+  font-size: 20px;
+}
+
+
+
+
+/*Animation Play-Pause*/
+
+.icones{
+  height: 50%;
+}
+
+.play{
+  animation: flash 1s;
+}
+
+@keyframes flash {
+  0%{ opacity : 0; }
+  50%{ opacity : 1; }
+  100%{ opacity : 0; }
+}
+
+.pause{
+  animation: appear 1s;
+}
+
+@keyframes appear {
+  0%{ opacity : 0; }
+  100%{ opacity : 1; }
+}
